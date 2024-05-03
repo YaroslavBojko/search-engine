@@ -41,6 +41,11 @@ public:
       */
       void readConfigFile (std::string path = "../config\\config.json");
 
+      /**
+       * Метод вывода пути ресурсных файлов
+       */
+       void sealPathFiles();
+
     /**
      * Method for getting file contents
      * @return a list with the contents of the files listed

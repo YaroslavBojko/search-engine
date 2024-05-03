@@ -39,3 +39,36 @@ void ConverterJson::readConfigFile(std::string path)
         std::cerr << "Config file is missing" << std::endl;
     }
 }
+
+void ConverterJson::sealPathFiles()
+{
+    for(auto path : resourcesPaths)
+    {
+        std::cout << path << " ";
+    }
+}
+
+std::vector<std::string> ConverterJson::getTextDocuments()
+{
+    textDocuments.clear();
+    for(const auto& resourcesFile : resourcesPaths)
+    {
+        std::ifstream stream(resourcesFile);
+        if (stream.is_open())
+        {
+            std::string buffer1;
+            while (stream.eof())
+            {
+                std::string buffer2;
+                stream >> buffer2;
+                buffer1 += buffer2;
+                buffer1 += " ";
+            }
+            textDocuments.push_back(buffer1);
+            stream.close();
+        } else
+        {
+            std::cerr << "Error file not found!!!" << std::endl;
+        }
+    }
+}
