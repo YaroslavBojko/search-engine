@@ -48,6 +48,28 @@ void ConverterJson::sealPathFiles()
     }
 }
 
+std::vector<std::string> ConverterJson::sealFiles1()
+{
+    std::cout << resourcesPaths[1] << std::endl;
+    /*std::ifstream stream(resourcesPaths[1]);
+    if (stream.is_open())
+    {
+        std::string buffer1;
+        while (stream.eof())
+        {
+            std::string buffer2;
+            stream >> buffer2;
+            buffer1 += buffer2;
+            buffer1 += " ";
+        }
+        textDocuments.push_back(buffer1);
+        stream.close();
+    } else
+    {
+        std::cerr << "Error file not found!!!" << std::endl;
+    }*/
+}
+
 std::vector<std::string> ConverterJson::getTextDocuments()
 {
     textDocuments.clear();

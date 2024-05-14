@@ -4,5 +4,5 @@ int main()
 {
     ConverterJson::getObject()->readConfigFile();
     ConverterJson::getObject()->sealPathFiles();
-    ConverterJson::getObject()->getTextDocuments();
+    ConverterJson::getObject()->sealFiles1();
 }

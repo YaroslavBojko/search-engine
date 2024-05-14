@@ -46,6 +46,11 @@ public:
        */
        void sealPathFiles();
 
+       /**
+        * Метод вывода содержимого 1-го файла
+        */
+       std::vector<std::string> sealFiles1();
+
     /**
      * Method for getting file contents
      * @return a list with the contents of the files listed
